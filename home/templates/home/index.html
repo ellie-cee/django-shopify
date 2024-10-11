@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="flex">
+    <div><img src="/static/images/candr-logo.png" width="320" height="320"></div>
+    <div><h1>{{ env.APP_NAME }}</h1>
+        {% include "nav.html" with items=nav %}
+    </div>
+</div>
+{% endblock %}

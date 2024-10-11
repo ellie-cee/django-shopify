@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<script src="/static/js/discounts.js"></script>
+<div class="main">
+    <div class="flex">
+      <div><h2>Active Discounts</h2></div>
+    </div>
+    <div>
+      <ul>
+        {% for discount in discounts %}
+        <li><a href="/discounts/edit/{{ discount.id}}">{{ discount.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <ul><li><a href="/discounts/create">New Discount</a></li></ul>
+    </div>
+</div>
+
+{% csrf_token %}
+
+
+{% endblock %}

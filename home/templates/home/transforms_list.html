@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<script src="/static/js/discounts.js"></script>
+<div class="main">
+    <div class="flex">
+      <div><h2>Active Cart transforms</h2></div>
+    </div>
+    <div>
+      <ul>
+        {% for transform in transforms %}
+        <li><a href="/cartTransforms/edit/{{ transform.id }}">{{ transform.title }} {{ transform.functionId }}</a></li>
+        {% endfor %}
+      </ul>
+      <ul><li><a href="/cartTransforms/create">New Cart Transform</a></li></ul>
+    </div>
+</div>
+
+{% csrf_token %}
+
+
+{% endblock %}

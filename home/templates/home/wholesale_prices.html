@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<script src="/static/wholesale_discounts.js"></script>
+<link rel="stylesheet" href="/static/stylesheets/importer.css">
+<div class="main">
+    <div class="injection-point">
+      <div style="display:flex;justify-content: center;">
+        <img src="{% static 'images/loading.gif' %}" style="width:25%">
+      </div>
+    </div>
+</div>
+{% csrf_token %}
+<script>
+    const importer = new WholesaleDiscounts({
+        "injection_point":".injection-point",
+    });
+</script>
+{% endblock %}

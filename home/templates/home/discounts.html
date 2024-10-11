@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<script src="/static/js/discounts.js"></script>
+<div class="main">
+    <div class="injection-point">
+      <div style="display:flex;justify-content: center;">
+        <img src="{% static 'images/loading.gif' %}" style="width:25%">
+      </div>
+      </div>
+      
+</div>
+
+
+<script type="application/json" data-function="44675ca8-521b-4837-959b-dc440f72cab6">
+  {
+    "fields":[
+      {
+        "type":"boolean",
+        "name":"enabled",
+        "label":"Discount Enabled",
+        "default":false
+      },
+      {
+        "type":"number",
+        "name":"discount",
+        "label":"Discount Amount",
+        "default":5
+      },
+      {
+        "type":"text",
+        "name":"message",
+        "label":"Discount Message",
+        "default":"5% Discount"
+      },
+      {
+        "type":"number",
+        "name":"minAmount",
+        "default":150,
+        "label":"Cart Minimum"
+      }
+    ]
+  }
+</script>
+<script type="application/json" data-function="f3687f76-648f-4511-b582-a04b2564b1f7">
+  {
+    "fields":[
+      {
+        "type":"boolean",
+        "name":"enabled",
+        "label":"Discount Enabled",
+        "default":false
+      },
+      {
+        "type":"number",
+        "name":"discount",
+        "label":"Discount Percent",
+        "default":5
+      },
+      {
+        "type":"text",
+        "name":"message",
+        "label":"Discount Message",
+        "default":150
+      }
+    ]
+  }
+</script>
+
+{% csrf_token %}
+<script>
+  const crud = new DiscountsCRUD({
+    injection_point:".injection-point",
+    id:"{{ discount_id }}",
+    debug:true,
+  });
+</script> 
+
+
+{% endblock %}

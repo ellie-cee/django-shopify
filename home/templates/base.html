@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="/static/images/c+r-logo.png">
+  <title>{% block title %}{{ env.APP_NAME }}{% endblock %}</title>
+  <link href="/static/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/static/js/cnr.js"></script>
+  
+</head>
+<body>
+  <div id="header">
+    <img src="/static/images/logo.png" style="height:80px">
+  </div>
+    <div id="menu">
+    <div class="menu-label">{{request.session.site_details.friendly_name}}</div>
+    {% for item in nav %}
+      <div class="menu-item"><a href="{{item.path}}">{{ item.label }}</a></div>
+    {% endfor %}
+  </div>
+  <div id="container" class="clearfix">
+    <!-- Flash error & notice-->
+    {% if messages %}
+      {% for message in messages %}
+      <div{% if message.tags %} class="{{ message.tags }}-message"{% endif %}>{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+    <!-- begin div.main-->
+    <div id="main">
+      {% block content %}{% endblock %}
+    </div>
+    <!-- end div.main -->
+  </div>
+</body>
+</html>

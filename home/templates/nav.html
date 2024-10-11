@@ -1,0 +1,8 @@
+<ul class="nav">
+{% for item in items %}
+    <li><a href="{{item.path}}">{{ item.label }}</a></li>
+    {% if item.children %}
+        {% include "nav.html" with items=item.children %}
+    {% endif %}
+{% endfor %}
+</ul>

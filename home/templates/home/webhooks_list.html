@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<script src="/static/js/discounts.js"></script>
+<div class="main">
+    <div class="flex">
+      <div><h2>Active Webhooks</h2></div>
+    </div>
+    <div>
+      <ul>
+        {% for webhook in webhooks %}
+        <li><a href="/webhooks/edit/{{ webhook.id}}">{{ webhook.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <ul><li><a href="/webhooks/create">New Webhook</a></li></ul>
+    </div>
+</div>
+
+{% csrf_token %}
+
+
+{% endblock %}

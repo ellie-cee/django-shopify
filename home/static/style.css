@@ -1,0 +1,89 @@
+.cnr-json-object {
+    border-radius: 2em;
+    min-width:700px;
+   
+    border:1px solid #000;
+    padding:8px;
+    margin:8px;
+    max-height: 650px;
+
+    overflow-y:scroll;
+}
+.cnr-form-row {
+    display: flex;
+    flex-direction: row;
+    gap:12px;
+    justify-content: left;
+    align-items: center;
+    padding: 8px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.cnr-form-row.header {
+    font-weight:bold;
+    border-bottom:1px solid #131313;
+}
+.cnr-form-row.header {
+    font-weight:bold;
+}
+.cnr-form-nutrition-facts  {
+    border:1px dashed #d8d8d8;
+    margin-left:24px;
+}
+
+.cnr-form-nutrition-facts .header {
+    display: flex;
+    flex-direction: row;
+    gap:24px;
+    justify-content: left;
+
+    align-items: center;
+}
+.injection-point {
+    width:100%;
+    overflow: scroll;
+}
+.all-items-holder {
+    
+    display:flex;
+    gap:24px;
+    flex-direction: row;
+    overflow:scroll;
+}
+.all-items-holder textarea {
+    width:50%;
+    height: fit-content;
+}
+.all-items-holder input {
+    width:fit-content;
+    
+}
+
+.cnr-json-form-add,.all-items-holder button {
+    width:24px;
+    height:24px;
+    background-color: transparent;
+    border:none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    margin-left:4px;
+}
+.all-items-holder button.delete {
+    background-image: url(delete.png);
+}
+.all-items-holder button.clone {
+    background-image: url(clone.png);
+}
+.cnr-json-form-add,.all-items-holder button.add {
+    background-image: url(add-text.png);
+}
+input[name="amount_per_serving"] {
+    width:48px;
+}
+input[name="daily_value"] {
+    width:48px;
+}
+.spacer {
+    flex-grow:1;
+}

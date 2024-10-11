@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<script src="/static/js/webhooks.js"></script>
+<div class="main">
+    <div class="injection-point">
+      <div style="display:flex;justify-content: center;">
+        <img src="{% static 'images/loading.gif' %}" style="width:25%">
+      </div>
+      </div>
+      
+</div>
+
+{% csrf_token %}
+
+<script>
+  const transforms = new WebhooksCRUD({
+    injection_point:".injection-point",
+    id:"{{ id }}",
+    debug:true,
+    "baseUrl":"{{ app_url }}"
+  });
+</script>
+
+{% endblock %}

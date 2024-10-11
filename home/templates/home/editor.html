@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<script src="{% static 'nutrition_table_editor.js' %}"></script>
+<script src="{% static 'products_list.js' %}"></script>
+<link rel="stylesheet" href="{% static 'stylesheets/nurtrition_table_editor.css'%}">
+<link rel="stylesheet" href="{% static 'stylesheets/preview-table.css' %}">
+<div class="main">
+    <div class="injection-point">
+      <div style="display:flex;justify-content: center;">
+        <img src="{% static 'images/loading.gif' %}" style="width:25%">
+      </div>
+      </div>
+      
+</div>
+
+{% csrf_token %}
+{% if request.GET.id %}
+<script>
+  const product_id = "{{ product_id }}";
+  
+  const editor = new JSONEditor(
+    product_id,
+    ".injection-point"
+  );
+</script>
+{% else %}
+<script>
+  const list = new ProductsList(
+    {injection_point:".injection-point",sitename:"{{ request.session.site_details.shopify_site}}"}
+  );
+</script>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = ""
+name = ""
+handle = ""
+application_url = ""
+embedded = true
+
+[auth]
+redirect_urls = [
+	"shopify/auth/",
+	"shopify/login/",
+	"shopify/finalize/",
+	"shopify/logout"
+]
+
+[build]
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_content,read_customers,read_discounts,read_discovery,read_files,read_inventory,read_metaobject_definitions,read_metaobjects,read_online_store_pages,read_orders,read_products,write_content,write_customers,write_discounts,write_files,write_inventory,write_metaobject_definitions,write_metaobjects,write_online_store_pages,write_orders,write_products,read_cart_transforms,write_cart_transforms"
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false

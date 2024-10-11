@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<script src="/static/import_export.js"></script>
+<link rel="stylesheet" href="/static/stylesheets/importer.css">
+{% if request.session.site_details.parent_site %}
+<div class="status-field"><h1>ready to import...</h1></div>
+<div class="subtext"></div>
+<div class="importer-status-bar">
+    <div class="importer-status-fill"></div>
+</div>
+{% csrf_token %}
+<div><button class="load-button">Begin Import</button></div>
+<script>
+    const importer = new NutritionTableImporter({
+        source_id:"{{ request.session.site_details.parent_site }}",
+        dest_id:"{{ request.session.site_details.id }}"
+    });
+</script>
+
+{% else %}
+This is the site of record for this dataset.
+{% endif %}
+{% endblock %}

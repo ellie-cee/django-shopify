@@ -1,0 +1,31 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = ">=3.0.2"
+ShopifyAPI = {file = "git+https://github.com/Shopify/shopify_python_api.git"}
+django-shopify-webhook = ">=0.6.0"
+gunicorn = "*"
+mysqlclient = "*"
+whitenoise="*"
+Jinja2 = ">=3.0.2"
+djangorestframework="*"
+markdown="*"
+django-filter="*"
+python-slugify=">=8.0.0."
+requests="*"
+jmespath="*"
+dateparser="*"
+mysql-connector-python="*"
+us="*"
+heroku3="*"
+random-password-generator="*"
+chardet="*"
+charset_normalizer="*"
+toml="*"
+[requires]
+python_version = ">=3.9.18"

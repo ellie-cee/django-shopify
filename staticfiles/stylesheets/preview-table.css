@@ -1,0 +1,435 @@
+.ae--product-ingredients__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .ae--product-ingredients__column:last-child {
+    width: 47rem;
+    max-width: 47rem;
+    flex-basis: 47rem;
+    margin-right: 67px;
+  }
+  
+  .ae--product-ingredients__column:first-child {
+    width: calc(100% - 49rem);
+    max-width: calc(100% - 49rem);
+    flex-basis: calc(100% - 49rem);
+    display: flex;
+    flex-direction: row;
+    grid-gap: 2rem;
+    margin-left: 46px;
+  }
+  .ae--product-ingredients-section-image {
+    width: calc(100% - 14rem);
+    object-fit: cover;
+  }
+  
+  .ae--product-ingredients-icon-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ae--product-ingredients-icon-list li {
+    width: 12rem;
+    height: 12rem;
+  }
+  /* .ae--product-ingredients-icon-list li:not(:last-child) {
+    margin-bottom: 2.5rem;
+  } */
+  
+  .ae--product-ingredients__info {
+    text-align: center;
+  }
+  
+  .ae--product-ingredients__info h2 {
+    font-family: var(--secondary-font-bold);
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 4.3rem;
+    margin: 0 0 2rem;
+  }
+  
+  .ae--product-ingredients__info p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ae--product-ingredients__info .ae--button {
+    width: 28rem;
+    margin: 0 auto;
+  }
+  
+  #ingredients-slider-desktop .splide__arrow--prev,
+  #ingredients-slider-desktop .splide__arrow--next,
+  #ingredients-slider-mobile .splide__arrow--prev,
+  #ingredients-slider-mobile .splide__arrow--next {
+    background: #FFF;
+  }
+  .splide__arrow {
+    height:62px;
+    width: 62px;
+  }
+  .splide__arrow--prev {
+    left: -57px;
+    border: 1px solid #000;
+  }
+  .splide__arrow--next {
+    right: -4em;
+    border: 1px solid #000;
+  }
+  
+  /* Supplement Facts Table Styles */
+  
+  .manufactured-link {
+    text-decoration: underline;
+  }
+  
+  .supplement-facts--table {
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    padding-bottom: 15px;
+  }
+  .supplemnt-facts-variety-title {
+    background: var(--product-bg-color);
+    padding-inline: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 40px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    font-size: 36px;
+    font-family: var(--secondary-font-bold);
+    color: #1E1E1E;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .nutrition-body {
+    border-radius: 16px;
+    border: 2px solid #000;
+    margin: 15px 15px 0;
+  }
+  
+  .nutrition-body--inner {
+   
+    padding-inline: 16px;
+    padding-top: 4px;
+    padding-bottom: 13.5px;
+  }
+  
+  /* For WebKit browsers (Chrome, Safari) */
+  .nutrition-body--inner::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .nutrition-body--inner::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 16px;
+  }
+  
+  .nutrition-body--inner::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  /* Header Section */
+  .supplement-facts__header {
+    text-align: left;
+  }
+  
+  .supplement-facts__header .nutrition-title {
+    text-align: left;
+    border-bottom: 1px solid #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    container-type: inline-size;
+  }
+  
+  .supplement-facts__header .nutrition-title .section-header__title {
+    font-family: 'AvenirBlack';
+    text-transform: capitalize;
+    font-size: 32px;
+  }
+  
+  .supplement-facts__header div {
+    font-size: 14px;
+    color: #1E1E1E;
+    font-family: "AvenirMedium", sans-serf;
+  }
+  
+  /* Body Section */
+  .supplement-facts__body {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    border-bottom: 6px solid;
+  }
+  .calories-span::after {
+    height: 1px;
+    display: block;
+    width: 100%;
+    background: black;
+    content: '';
+  }
+  
+  .supplement-facts__body li {
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .supplement-facts__body .nutrition-facts-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .supplement-facts__body .nutrition-facts-row span {
+    font-family: "Avenir", sans-serf;
+    font-size: 16px;
+  }
+  .supplement-facts__body .sub-facts .nutrition-facts-row .nutrition-facts-label {
+    padding-left: 30px;
+  }
+  
+  .supplement-facts__body .calories-text,
+  .supplement-facts__body .calories-value {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .supplement-facts__body .calories-text .calories{
+    font-family: "AvenirBlack", sans-serf;
+    font-size: 20px;
+    margin-top: -8px;
+  }
+  
+  .supplement-facts__body .calories-text .amount-per-serving{
+    font-family: "AvenirMedium", sans-serf;
+    font-size: 16px;
+  }
+  
+  
+  .supplement-facts__body .calories-value .calories{
+    font-family: "AvenirMedium", sans-serf;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: right;
+  }
+  
+  .supplement-facts__body .calories-value .daily-value{
+    font-family: "AvenirBlack", sans-serf;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .supplement-facts__body .nutrition-facts-row.calories .nutrition-facts-label{
+    font-family: "AvenirMedium", sans-serf;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .supplement-facts__body .nutrition-facts-row.calories .nutrition-value{
+    font-family: 'AvenirBlack';
+    font-size: 16px;
+  }
+  
+  
+  .supplement-facts__body .nutrition-facts-row .nutrition-daily_value{
+   min-width: 20px;
+   text-align: center;
+  }
+  
+  .is-more-true:first-child {
+    border-top: 5px solid #000!important;
+    background-color: #ff8888;
+  }
+  
+  .supplement-facts__body > .has-content ~ .has-content {
+    border:none;
+  }
+  
+  .supplement-facts__body li.has-content .nutrition-facts-content{
+    width: 100%;
+    font-size: 12px;
+    margin: 0;
+    font-family: "AvenirMedium", sans-serf;
+    line-height: 150%;
+  }
+  
+  .supplement-facts__body li.nutrition-header {
+    display: flex;
+    justify-content: space-between;
+    border-top: 6px solid #000;
+    border-bottom: 3px solid #000;
+  }
+  
+  .nutrition-facts-label strong{
+    font-family: 'Avenir';
+    font-size: 16px;
+  }
+  .nutrition-facts-amount-label strong {
+    font-family: 'AvenirBlack';
+    font-size: 16px;
+  }
+  
+  .nutrition-facts-contains-label strong {
+    font-family: 'AvenirBlack';
+    font-size: 16px;
+  }
+  .nutrition-facts-row {
+    border-bottom: 1px solid;
+  }
+  
+  .sub-facts {
+    list-style: none;
+  }
+  
+  
+  
+  /* Footer Section */
+  .supplement-facts__footer {
+    margin-top: 5px;
+  }
+  
+  .supplement-facts__footer--daily-note {
+    width: 100%;
+    font-size: 12px;
+    margin: 0;
+    font-family: "AvenirMedium", sans-serf;
+    line-height: 150%;
+  }
+  .supplement-facts__footer--daily-note p {
+    margin: 0;
+  }
+  
+  .supplement-facts__footer-note {
+    font-size: 14px;
+    font-weight: 350;
+    margin-top: 6px;
+    padding: 0 26.5px;
+  }
+  .footer-note-p {
+    margin-top: 8px;
+    margin-bottom: 0px;
+  }
+  
+  .supplements-slider .splide__arrow.splide__arrow--prev {
+    border: 1px solid #000;
+    background: #fff!important;
+    left: -108px;
+  }
+  .supplements-slider .splide__arrow.splide__arrow--next {
+    border: 1px solid #000;
+    background: #fff!important;
+    right: -108px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .supplement-facts--table {
+      width: 100%;
+      background: var(--product-bg-color);
+    }
+  
+    .nutrition-body--inner {
+      max-height: 100vh
+    }
+    .supplement-facts__header .nutrition-title {
+      padding-bottom: 10px;
+    }
+    .supplement-facts__body .nutrition-facts-row span,
+    .nutrition-facts-label strong,
+    .supplement-facts__header div {
+      font-size: 12px;
+    }
+  
+    .supplement-facts__body .calories-value .calories {
+      font-size: 16px;
+    }
+  
+    .supplement-facts__body .calories-text .amount-per-serving {
+      font-size: 12px;
+      line-height: 2;
+    }
+  
+    .supplement-facts__body .calories-text .calories {
+      font-size: 14px;
+    }
+    .supplement-facts__body .nutrition-facts-row {
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+    .supplement-facts__header .nutrition-title .section-header__title {
+      font-size: 11.8cqw;
+    }
+  
+    .ae--product-accordion-content .supplemnt-facts-variety-title {
+      font-size: 26px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .supplements-slider .splide__arrow.splide__arrow--prev {
+      left: -10px;
+      border: none;
+      background: transparent!important;
+    }
+    .supplements-slider .splide__arrow.splide__arrow--next {
+      right: -10px;
+      border: none;
+      background: transparent!important;
+    }
+    .nutrition-body {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .supplements-slider .splide__pagination {
+      display: none;
+    }
+  
+    .ae--product-accordion-icon-list {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .supplement-facts__footer-note {
+      padding: 0 43px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .ae--product-ingredients-icon-list {
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+  }
+  
+  @media (min-width: 1441px) {
+    .ae--product-ingredients__column:first-child {
+      grid-gap: 5rem;
+      width: calc(100% - 53rem);
+      max-width: calc(100% - 53rem);
+      flex-basis: calc(100% - 53rem);
+    }
+    .ae--product-ingredients-section-image {
+      width: calc(100% - 19rem);
+      object-fit: contain;
+    }
+  }
+  
+  .wave-wrapper.ingredients {
+    display: none;
+  }
+  

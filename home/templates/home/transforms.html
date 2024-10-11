@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<script src="/static/js/transforms.js"></script>
+<div class="main">
+    <div class="injection-point">
+      <div style="display:flex;justify-content: center;">
+        <img src="{% static 'images/loading.gif' %}" style="width:25%">
+      </div>
+      </div>
+      
+</div>
+
+{% csrf_token %}
+
+
+<script type="application/json" data-function="4ae1e924-60cf-43b3-8639-bec72ae148aa">
+  {
+    "fields":[
+      {
+        "type":"number",
+        "name":"productId",
+        "label":"Product ID",
+        "default":8675309
+      },
+      {
+        "type":"number",
+        "name":"minimum_charge",
+        "label":"Minimum Charge",
+        "default":1.95
+      },
+      {
+        "type":"number",
+        "name":"maximum_charge",
+        "label":"Maximum Charge",
+        "default":99.95
+      },
+      {
+        "type":"boolean",
+        "name":"enabled",
+        "label":"Transform Enabled",
+        "default":false
+      }
+    ]
+  }
+</script>
+<script>
+  const transforms = new TransformsCRUD({
+    injection_point:".injection-point",
+    id:"{{ id }}",
+    debug:true,
+  });
+</script>
+
+{% endblock %}
