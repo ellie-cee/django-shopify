@@ -6,11 +6,12 @@ import logging
 import json
 from django.http import HttpResponse
 from .models import ShopifySite
-from .cnr import webhooks
-from .cnr.graphql_common import Discounts,Metafields
+from .esc import webhooks
+from .esc.graphql_common import Discounts,Metafields
 from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
-from .cnr_views import *
+from . import esc
+from .esc.views import *
 from .project import webhooks as project_webhooks    
 
 logger = logging.getLogger(__name__)
