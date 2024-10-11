@@ -6,8 +6,8 @@ import logging
 import json
 from django.http import HttpResponse
 from .models import ShopifySite
-from .cnr import webhooks
-from .cnr.graphql_common import Discounts,Metafields,Functions,CartTransforms,Webhooks,Application
+from . import webhooks
+from .graphql_common import Discounts,Metafields,Functions,CartTransforms,Webhooks,Application
 from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 from jmespath import search as jsearch

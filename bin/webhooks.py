@@ -16,7 +16,7 @@ import csv
 import os
 from jmespath import search as jpath
 from argparse import ArgumentParser
-from home.cnr.graphql_common import Webhooks
+from home.esc.graphql_common import Webhooks
 import requests
 
 def hookByTopic(topic):

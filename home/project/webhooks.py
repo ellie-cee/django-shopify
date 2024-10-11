@@ -1,1 +1,1 @@
-from ..cnr.webhooks import WebhookBase, RechargeWebhooks
+from ..esc.webhooks import WebhookBase, RechargeWebhooks

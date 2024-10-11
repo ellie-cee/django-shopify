@@ -99,7 +99,7 @@
                 "startsAt":this.formData.get("startsAt"),
                 "endsAt":this.formData.get("endsAt")||null,
                 "metafield":this.formData.get("json")!=""?{
-                    "namespace":"cnr",
+                    "namespace":"esc",
                     "key":"config",
                     "type":"json",
                     "value":this.formData.get("metafield")

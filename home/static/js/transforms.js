@@ -85,7 +85,7 @@ class TransformsCRUD extends FunctionAwareCRUD {
             "id":this.formData.get("id"),
             "functionId":this.formData.get("functionId"),
             "metafield":this.formData.get("metafield") && this.formData.get("metafield")!=""?{
-                "namespace":"cnr",
+                "namespace":"esc",
                 "key":"config",
                 "type":"json",
                 "value":this.formData.get("metafield")

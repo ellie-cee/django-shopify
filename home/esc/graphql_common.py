@@ -81,7 +81,7 @@ class Discounts(GraphQL):
                                 }
                             }
                         }
-                        metafield(namespace:"cnr",key:"config") {
+                        metafield(namespace:"esc",key:"config") {
                             value
                         }  
                     }
@@ -172,7 +172,7 @@ class Discounts(GraphQL):
                         }                                
                     }
                 }
-                metafield(namespace:"cnr",key:"config") {
+                metafield(namespace:"esc",key:"config") {
                     value
                 }  
             }
@@ -408,7 +408,7 @@ class CartTransforms(GraphQL):
                         functionId
                         id
                         blockOnFailure
-                        metafield(key:"config",namespace:"cnr") {
+                        metafield(key:"config",namespace:"esc") {
                             value
                         }    
                     }

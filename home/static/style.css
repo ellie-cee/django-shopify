@@ -1,4 +1,4 @@
-.cnr-json-object {
+.esc-json-object {
     border-radius: 2em;
     min-width:700px;
    
@@ -9,7 +9,7 @@
 
     overflow-y:scroll;
 }
-.cnr-form-row {
+.esc-form-row {
     display: flex;
     flex-direction: row;
     gap:12px;
@@ -19,19 +19,19 @@
     flex-wrap: nowrap;
     align-items: center;
 }
-.cnr-form-row.header {
+.esc-form-row.header {
     font-weight:bold;
     border-bottom:1px solid #131313;
 }
-.cnr-form-row.header {
+.esc-form-row.header {
     font-weight:bold;
 }
-.cnr-form-nutrition-facts  {
+.esc-form-nutrition-facts  {
     border:1px dashed #d8d8d8;
     margin-left:24px;
 }
 
-.cnr-form-nutrition-facts .header {
+.esc-form-nutrition-facts .header {
     display: flex;
     flex-direction: row;
     gap:24px;
@@ -59,7 +59,7 @@
     
 }
 
-.cnr-json-form-add,.all-items-holder button {
+.esc-json-form-add,.all-items-holder button {
     width:24px;
     height:24px;
     background-color: transparent;
@@ -75,7 +75,7 @@
 .all-items-holder button.clone {
     background-image: url(clone.png);
 }
-.cnr-json-form-add,.all-items-holder button.add {
+.esc-json-form-add,.all-items-holder button.add {
     background-image: url(add-text.png);
 }
 input[name="amount_per_serving"] {

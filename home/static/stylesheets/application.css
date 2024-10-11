@@ -424,7 +424,7 @@ img.logo {
   flex-direction: column;
 }
 
-.cnr-modal {
+.esc-modal {
   position:absolute;
   top:0px;
   left:0px;
@@ -434,17 +434,17 @@ img.logo {
   
 }
 
-.cnr-modal.active {
+.esc-modal.active {
   display:flex;
   justify-content: center;
   align-items: center;
 }
-.cnr-modal .close {
+.esc-modal .close {
   position: absolute;
   top:5px;
   right:10px;
 }
-.cnr-modal .modal-content {
+.esc-modal .modal-content {
   margin-top:24px;
   width: fit-content;
   min-width:25%;

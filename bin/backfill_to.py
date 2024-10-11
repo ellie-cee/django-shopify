@@ -38,18 +38,18 @@ home/static/products_list.js
 home/static/js/transforms.js
 home/static/js/discounts.js
 home/static/js/webhooks.js
-home/static/js/cnr.js
+home/static/js/esc.js
 home/static/stylesheets/application.css
-home/cnr_urls.py
+home/esc/urls.py
 home/context_processors.py
 home/templates/base.html
 home/templates/nav.html
-home/cnr/recharge.py
-home/cnr/notifier.py
-home/cnr/graphql_common.py
-home/cnr/webhooks.py
+home/esc/recharge.py
+home/esc/notifier.py
+home/esc/graphql_common.py
+home/esc/webhooks.py
 home/models.py
-home/cnr_views.py""".split("\n")
+home/esc/views.py""".split("\n")
 
 source = f"{args.source}/" if not args.source.endswith("/") else args.source
 
